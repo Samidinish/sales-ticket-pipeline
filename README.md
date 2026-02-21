@@ -64,4 +64,10 @@ Runs an aggregation query to determine the most popular ticket events based on t
 
 ## 📈 Example Output
 
+Here are the most popular tickets in the past month:
+- Washington Spirits vs Sky Blue FC (Total Sold: 5)
+- Christmas Spectacular (Total Sold: 5)
+- Carlisle Ford Nationals (Total Sold: 1)
+- The North American International Auto Show (Total Sold: 1)
+
 
