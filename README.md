@@ -6,9 +6,7 @@ This mini project implements a basic ETL (Extract, Transform, Load) data pipelin
 
 The system simulates a ticket platform that ingests third-party ticket sales data from a CSV file, stores it in a MySQL database, and analyzes ticket sales to determine the most popular events.
 
-This project demonstrates database design, data loading, and aggregation queries using Python database connectors.
-
----
+This project demonstrates data loading, and aggregation queries using Python database connectors.
 
 ## Technologies Used
 
@@ -17,9 +15,7 @@ This project demonstrates database design, data loading, and aggregation queries
 - mysql-connector-python
 - CSV file processing
 
----
-
-## 📂 Project Structure
+## Project Structure
 
 sales-ticket-pipeline/
 │
@@ -47,7 +43,7 @@ Install MySQL:
 
 ---
 
-## 📊 What the Pipeline Does
+## What the Pipeline Does
 
 ### Step 1: Database Connection
 Establishes connection to MySQL using `mysql.connector`.
@@ -62,7 +58,7 @@ Runs an aggregation query to determine the most popular ticket events based on t
 
 ---
 
-## 📈 Example Output
+## Example Output
 
 Here are the most popular tickets in the past month:
 - Washington Spirits vs Sky Blue FC (Total Sold: 5)

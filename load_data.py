@@ -20,7 +20,6 @@ def load_third_party(connection, file_path_csv):
             next(csv_reader)  # Skip header row
 
             for row in csv_reader:
-                # Convert event_date to DATE format
                 row[4] = datetime.strptime(row[4], "%Y-%m-%d").date()
                 cursor.execute(insert_query, tuple(row))
 
