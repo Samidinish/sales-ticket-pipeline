@@ -1,43 +1,67 @@
-# Event Ticket System Data Pipeline
+# Event Ticket Sales Data Pipeline
 
 ## Project Overview
-This project builds a basic data pipeline using Python and MySQL.
-It loads third-party ticket sales data from a CSV file into a MySQL database
-and generates a report of the most popular tickets in the past month.
 
-## Requirements
+This mini project implements a basic ETL (Extract, Transform, Load) data pipeline using Python and MySQL.
 
-- Python 3.x
-- MySQL Server
+The system simulates a ticket platform that ingests third-party ticket sales data from a CSV file, stores it in a MySQL database, and analyzes ticket sales to determine the most popular events.
+
+This project demonstrates database design, data loading, and aggregation queries using Python database connectors.
+
+---
+
+## Technologies Used
+
+- Python 3
+- MySQL
 - mysql-connector-python
+- CSV file processing
 
-Install dependency:
+---
 
-pip3 install mysql-connector-python
+## 📂 Project Structure
 
-## Setup Steps
+sales-ticket-pipeline/
+│
+├── create_table.sql
+├── db_connection.py
+├── load_data.py
+├── queries.py
+├── main.py
+├── third_party_sales_1.csv
+├── execution_log.txt
+└── README.md
 
-1. Create database:
-   CREATE DATABASE ticket_db;
 
-2. Run create_table.sql to create the sales table.
+---
 
-3. Update database credentials in ticket_pipeline.py.
+##  Setup Instructions
 
-4. Place third_party_sales.csv in project directory.
+### Install MySQL (Mac - using Homebrew)
 
-5. Run the pipeline:
+Install Homebrew (if not installed):
 
-   python3 ticket_pipeline.py
+Install MySQL:
+### 2 Create Database
 
-## Expected Output
 
-Database connection successful
-CSV Data Loaded Successfully
+---
 
-Here are the most popular tickets in the past month:
-- The North American International Auto Show
-- Carlisle Ford Nationals
-- Washington Spirits vs Sky Blue FC
+## 📊 What the Pipeline Does
 
-Pipeline completed successfully.
+### Step 1: Database Connection
+Establishes connection to MySQL using `mysql.connector`.
+
+### Step 2: CSV Data Loading
+Reads `third_party_sales_1.csv` and inserts each record into the `sales` table.
+
+Dates are converted into proper DATE format before insertion.
+
+### Step 3: Data Analysis
+Runs an aggregation query to determine the most popular ticket events based on total tickets sold.
+
+---
+
+## 📈 Example Output
+
+
